@@ -1,4 +1,32 @@
 import java.util.Scanner;
+import java.util.Scanner;
+
+
+public class RewardValue extends GraphicsProgram{
+    private double cashValue;
+    private double milesValue;
+
+    // Constructor accepting cash value
+    public RewardValue(double cash) {
+        this.cashValue = cash;
+        this.milesValue = cash * 0.0035; // Conversion rate
+    }
+
+    // Constructor accepting miles value
+    public RewardValue(int miles) {
+        this.milesValue = miles;
+        this.cashValue = miles / 0.0035; // Conversion rate
+    }
+
+    // Getter method for cash value
+    public double getCashValue() {
+        return cashValue;
+    }
+
+    // Getter method for miles value
+    public double getMilesValue() {
+        return milesValue;
+    }
 
 public class RewardsConverter {
     public static void main(String[] args) {
